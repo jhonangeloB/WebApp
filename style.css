@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.wrapper {
+    margin: 20px;
+    background-color: #fff;
+    width: 450px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 10px -10px;
+}
+
+.form {
+    padding: 30px 30px 20px;
+}
+
+/* Landing Page CSS */
+.form .contents form{
+    padding: 20px 0;
+    display: flex;
+    width: 100%;
+}
+
+.form .contents {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form .contents .button{
+    width: calc(100% / 2 - 10px);
+}
+
+.contents .button form input {
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px #303030;
+}
+
+.form .contents .loginbtn {
+    background-color: #fff;
+    color: #303030;
+}
+    .form .contents .loginbtn:hover {
+        background-color: #303030;
+        color: #fff;
+        transition: .3s ease;
+    }
+
+.form .contents .signupbtn {
+    background-color: #303030;
+    color: #fff;
+}
+    .form .contents .signupbtn:hover {
+        background-color: #fff;
+        color: #303030;
+        transition: .3s ease;
+    }
+
+/* Signup and Login form css */
+.header {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ccc;
+}
+
+.header label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content {
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.content .error-field {
+    height: 30px;
+    background-color: #ffa8b5;
+    border-radius: 4px;
+    text-align: center;
+    outline: solid 2px #ff8ba0;
+}
+
+.content .error-field span {
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #303030;
+}
+
+.content form .input-field {
+    padding: 8px 0;
+}
+
+.content .input-field label {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.content .input-field input {
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    outline: solid 1px #ccc;
+    border-style: none;
+    margin-top: 4px;
+    padding: 0 16px;
+}
+
+.content .input-field input:valid,
+.content .input-field input:focus {
+    outline: solid 1px #303030;
+    transition: 0.3s ease;
+}
+
+.content .input-field .submit {
+    background-color: #303030;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content .input-field .submit:hover {
+    opacity: .8;
+    transition: .3s ease;
+}
+
+.content .link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.content .link a{
+    text-decoration: none;
+}
+
+.content .link a:hover{
+    text-decoration: underline;
+}
+
+/* Home Page CSS */
+.container {
+    margin: 20px;
+    width: 800px;
+    border-radius: 12px;
+}
+
+.container .panels {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+}
+.container .l-wing{
+    padding: 20px 20px;
+    background-color: #fff;
+    width: calc(40% - 5px);
+    border-radius: 12px 0 0 12px;
+    box-shadow: 0px 10px 10px -10px;
+}
+
+.container .r-wing{
+    padding: 20px 20px;
+    background-color: #fff;
+    width: calc(60% - 5px);
+    border-radius:  0 12px 12px 0;
+    box-shadow: 0px 10px 10px -10px;
+}
+
+/* Left Wing */
+.panels .l-wing .l-header {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ccc;
+}
+
+.panels .l-wing .l-header {
+    display: flex;
+}
+
+.panels .l-wing .l-header .user-info{
+    width: calc(80% - 10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.panels .l-wing .l-header .user-info .user {
+    display: flex;
+}
+
+.panels .l-wing .l-header .user-info h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.panels .l-wing .l-header .user-info .user p{
+    font-style: italic;
+    font-size: 12px;
+    color: #606060;
+    line-height: 24px;
+}
+
+.panels .l-wing .l-header .user-info .status p{
+    font-size: 12px;
+    color: #303030;
+    font-weight: 400;
+}
+
+.panels .l-wing .l-header .user-info .status i {
+    transform: translateY(-20%);
+    color: green;
+    font-size: 6px;
+}
+
+.panels .l-wing .l-header .logout-btn {
+    width: calc(20% - 10px);
+}
+
+    .panels .l-wing .l-header .logout-btn:hover {
+        opacity: .8;
+        transition: .3s ease;
+    }
+
+.panels .l-wing .l-header .logout-btn form input{
+    outline: none;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    background-color: #303030;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.panels .l-wing .l-content {
+    margin: 10px 0;
+}
+
+.panels .l-wing .l-content .search form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.panels .l-wing .l-content .search input {
+    outline: none;
+    border: solid 1px #ccc;
+    height: 30px;
+    padding: 0 14px;
+    width: calc(100% - 40px);
+    border-radius: 4px 0 0 4px;
+}
+    .panels .l-wing .l-content .search input:focus {
+        border: solid 1px #303030;
+        transition: .3s ease;
+    }
+
+.panels .l-wing .l-content .search button {
+    border-style: none;
+    background-color: #303030;
+    color: #fff;
+    width: 38px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+    .panels .l-wing .l-content .search button:hover {
+        opacity: .8;
+        transition: .3s ease;
+    }
+
+.panels .l-wing .l-content .f-list {
+    margin-top: 10px;
+    max-height: 310px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 340px;
+}
+
+.panels .l-wing .l-content .f-list .card {
+    max-height: 100px;
+    padding: 6px 12px;
+    border-bottom: solid 1px #ccc;
+}
+
+.panels .l-wing .l-content .f-list .card .c-name h4 {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.panels .l-wing .l-content .f-list .card .c-msg {
+    padding: 0 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.panels .l-wing .l-content .f-list .card .c-msg p {
+    font-size: 10px;
+    color: #606060;
+}
+
+.panels .l-wing .l-content .add-user {
+    padding: 6px 0;
+}
+.panels .l-wing .l-content .add-user label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.panels .l-wing .l-content .add-user form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panels .l-wing .l-content .add-user form input{
+    padding: 0 14px;
+    font-size: 12px;
+    height: 25px;
+    border-style: none;
+    border-bottom: solid 1px #ccc;
+}
+    .panels .l-wing .l-content .add-user form input:focus {
+        outline: none;
+        border-bottom: solid 1px #303030;
+    }
+
+.panels .l-wing .l-content .add-user form .uname {
+    width: calc(50% - 10px);
+}
+
+.panels .l-wing .l-content .add-user form .ucode {
+    width: calc(30% - 10px);
+}
+
+.panels .l-wing .l-content .add-user form button {
+    border-style: none;
+    background-color: transparent;
+    color: #303030;
+    width: 34px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+
