@@ -1,3 +1,8 @@
+<?php 
+
+    session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +20,32 @@
                 <label>Login</label>
             </div>
             <div class="content">
-                <!-- <div class="error-field">
-                    <span>Please fill in the blanks</span>
-                </div> -->
-                <form action="">
+                
+                <?php 
+                    if (isset($_SESSION["error"])) {    ?>                            
+                        <div class="error-field">
+                            <span> 
+                                <?php echo $_SESSION["error"];  ?>
+                            </span>
+                        </div>
+                    <?php 
+                        unset($_SESSION["error"]);
+                    }
+                ?>
+
+                <?php 
+                    if (isset($_SESSION["success"])) {    ?>                            
+                        <div class="success-field">
+                            <span> 
+                                <?php echo $_SESSION["success"];  ?>
+                            </span>
+                        </div>
+                    <?php 
+                        unset($_SESSION["success"]);
+                    }
+                ?>
+
+                <form action="includes/login.inc.php" method="post">                  
                     <div class="input-field">
                         <label>Username or Email</label>
                         <input type="text" name="uid" placeholder="Enter Username or Email" required>

@@ -1,3 +1,9 @@
+<?php 
+
+    session_start();
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +24,9 @@
 
             <div class="l-wing">
                 <div class="l-header">
+                    <div class="c-img">
+                            <img src="img/img.png" alt="">
+                        </div>
                     <div class="user-info">
                         <div class="user">
                             <h4>John Smith &nbsp;</h4> 
@@ -28,7 +37,7 @@
                         </div>
                     </div>
                     <div class="logout-btn">
-                        <form action="logout.php">
+                        <form action="includes/logout.inc.php">
                             <input type="submit" value="Logout">
                         </form>
                     </div>
@@ -42,52 +51,67 @@
                     </div>
                     <div class="f-list">
                         <div class="card">
+                            <div class="c-img">
+                                <img src="img/img.png" alt="">
+                            </div>
                             <div class="c-name">
                                 <h4>John Smith</h4>
-                            </div>
-                            <div class="c-msg">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>   
+                            </div>
                         </div>
                         <div class="card">
+                            <div class="c-img">
+                                <img src="img/img.png" alt="">
+                            </div>
                             <div class="c-name">
                                 <h4>John Smith</h4>
-                            </div>
-                            <div class="c-msg">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>   
+                            </div>
                         </div>
                         <div class="card">
-                            <div class="c-name">
-                                <h4>John Doe</h4>
+                            <div class="c-img">
+                                <img src="img/img.png" alt="">
                             </div>
-                            <div class="c-msg">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>   
-                        </div>
-                        <div class="card">
                             <div class="c-name">
                                 <h4>John Smith</h4>
-                            </div>
-                            <div class="c-msg">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>   
+                            </div>
                         </div>
                         <div class="card">
+                            <div class="c-img">
+                                <img src="img/img.png" alt="">
+                            </div>
                             <div class="c-name">
                                 <h4>John Smith</h4>
-                            </div>
-                            <div class="c-msg">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>   
+                            </div>
                         </div>
                         <div class="card">
+                            <div class="c-img">
+                                <img src="img/img.png" alt="">
+                            </div>
                             <div class="c-name">
                                 <h4>John Smith</h4>
-                            </div>
-                            <div class="c-msg">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>   
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="c-img">
+                                <img src="img/img.png" alt="">
+                            </div>
+                            <div class="c-name">
+                                <h4>John Smith</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="c-img">
+                                <img src="img/img.png" alt="">
+                            </div>
+                            <div class="c-name">
+                                <h4>John Smith</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="add-user">
@@ -104,7 +128,28 @@
 
             <div class="r-wing">
                 <div class="r-header">
-                    Right Panel
+                    <div class="user-info">
+                        <h4>John Doe</h4>
+                    </div>
+                    <div class="status">
+                            <p>Active Now</p>
+                    </div>
+                    
+                </div>
+                <div class="r-content">
+                    <div class="chat-area">
+                        <div class="outgoing">
+                            <p>Hello</p>
+                        </div>
+                        <div class="incoming">
+                            <p>Hello</p>
+                        </div>
+                    </div>
+                    <div class="control-area">
+                        <input type="text" placeholder="Type message here...">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+
+                    </div>
                 </div>
             </div>
         </div>

@@ -86,19 +86,34 @@ body {
     margin: 10px 0;
 }
 
-.content .error-field {
-    height: 30px;
-    background-color: #ffa8b5;
+.content .success-field {
+    height: 35px;
     border-radius: 4px;
     text-align: center;
-    outline: solid 2px #ff8ba0;
+    background: #ecffd6;
+    border: 1px solid #617c42;
+}
+
+.content .success-field span {
+    line-height: 35px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #2b7515;
+}
+
+.content .error-field {
+    height: 35px;
+    background: #ffe0e0;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #a33a3a;
 }
 
 .content .error-field span {
-    line-height: 30px;
-    font-size: 14px;
-    font-weight: 300;
-    color: #303030;
+    line-height: 35px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ba3939;
 }
 
 .content form .input-field {
@@ -185,14 +200,23 @@ body {
 .panels .l-wing .l-header {
     padding-bottom: 10px;
     border-bottom: solid 1px #ccc;
-}
-
-.panels .l-wing .l-header {
     display: flex;
 }
 
+.panels .l-wing .l-header .c-img {
+    width: calc(20% - 5px);
+}
+
+.panels .l-wing .l-header .c-img img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
 .panels .l-wing .l-header .user-info{
-    width: calc(80% - 10px);
+    width: calc(60% - 5px);
     display: flex;
     flex-direction: column;
 }
@@ -226,7 +250,7 @@ body {
 }
 
 .panels .l-wing .l-header .logout-btn {
-    width: calc(20% - 10px);
+    width: calc(20% - 5px);
 }
 
     .panels .l-wing .l-header .logout-btn:hover {
@@ -292,10 +316,32 @@ body {
     height: 340px;
 }
 
+.panels .l-wing .l-content .f-list::-webkit-scrollbar {
+    display: none;
+  }
+
 .panels .l-wing .l-content .f-list .card {
     max-height: 100px;
-    padding: 6px 12px;
+    padding: 6px 0;
     border-bottom: solid 1px #ccc;
+    display: flex;
+}
+
+.panels .l-wing .l-content .f-list .card .c-img img{
+    border: solid 2px #303030;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 5px;
+    transform: translateY(10%);
+}
+
+.panels .l-wing .l-content .f-list .card .c-name {
+    display: block;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .panels .l-wing .l-content .f-list .card .c-name h4 {
@@ -303,21 +349,17 @@ body {
     font-weight: 500;
 }
 
-.panels .l-wing .l-content .f-list .card .c-msg {
-    padding: 0 0 0 10px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.panels .l-wing .l-content .f-list .card .c-msg p {
+.panels .l-wing .l-content .f-list .card .c-name p {
     font-size: 10px;
     color: #606060;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .panels .l-wing .l-content .add-user {
     padding: 6px 0;
 }
+
 .panels .l-wing .l-content .add-user label {
     font-size: 12px;
     font-weight: 600;
@@ -360,4 +402,61 @@ body {
     cursor: pointer;
 }
 
+.panels .l-wing .l-content .add-user form button:hover {
+    opacity: .8;
+    transition: .3s ease;
+}
+
+/* Right Wing */
+.panels .r-wing .r-header {
+    padding: 8px 14px;
+}
+.panels .r-wing .r-header {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ccc;
+}
+
+.panels .r-wing .r-header .user-info h4 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.panels .r-wing .r-header .status p {
+    font-size: 12px;
+    font-weight: 400;
+    color: green;
+}
+
+.panels .r-wing .r-content .chat-area {
+    height: 360px;
+    background-color: #f7f7f7;
+}
+
+.panels .r-wing .r-content .control-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: solid 1px #ccc;
+}
+
+.panels .r-wing .r-content .control-area input{
+    border: solid 1px #ccc;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+    height: 35px;
+    width: calc(100% - 50px);
+    padding: 0px 14px;
+    font-size: 14px;
+}
+
+.panels .r-wing .r-content .control-area i{
+    background-color: #303030;
+    color: #fff;
+    height: 35px;
+    width: 48px;
+    border-radius: 0 4px 4px 0;
+    justify-content: center;
+    line-height: 35px;
+    text-align: center;
+}
 

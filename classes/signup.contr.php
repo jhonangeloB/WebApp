@@ -18,31 +18,39 @@
 
         public function signupUser() {
 
+            session_start();
+
             if($this->emptyInput() == false) {
-                header("Location: ../index.php?error=emptyinput");
+                header("Location: ../signup.php");
+                $_SESSION['error'] = "Fields are empty.";
                 exit();
             }
 
             if($this->invalidUsername() == false) {
-                header("Location: ../index.php?error=invaliduser");
+                header("Location: ../signup.php");
+                $_SESSION['error'] = "Your username is invalid.";
                 exit();
             }
 
             if($this->invalidEmail() == false) {
-                header("Location: ../index.php?error=invalidemail");
+                header("Location: ../signup.php");
+                $_SESSION['error'] = "Your email is invalid.";
                 exit();
             }
 
             if($this->passwordMatch() == false) {
-                header("Location: ../index.php?error=password");
+                header("Location: ../signup.php");
+                $_SESSION['error'] = "Your password did not match.";
                 exit();
             }
             
             if($this->userTakenCheck() == false) {
-                header("Location: ../index.php?error=useralreadytaken");
+                header("Location: ../signup.php");
+                $_SESSION['error'] = "User already taken.";
                 exit();
             }
 
+            $_SESSION['success'] = "Account creation successful.";
             $this->setUser($this->uid, $this->email, $this->pwd, $this->cpwd);
         }
 

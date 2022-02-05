@@ -13,8 +13,11 @@
     include "../classes/login.class.php";
     include "../classes/login.contr.php";
 
-    //Create new LoginController
-
+    $login = new LoginController ($uid, $pwd);
+    
+    //Create new LoginController class
+    $login->loginUser();
+    
     //Redirect
     header("Location: ../home.php")
 

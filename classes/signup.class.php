@@ -1,5 +1,4 @@
 <?php 
-
     class Signup extends Dbh {
 
         protected function setUser($uid, $email, $numcode, $pwd) {
@@ -21,7 +20,7 @@
 
         protected function checkUser($uid, $email) {
 
-            $stmt = $this->connect()->prepare('SELECT user_pwd FROM users WHERE user_uid = ? AND user_email = ?;');
+            $stmt = $this->connect()->prepare('SELECT user_pwd FROM users WHERE user_uid = ? OR user_email = ?;');
 
             if(!$stmt->execute(array($uid, $email))) {
                 

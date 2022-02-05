@@ -20,7 +20,7 @@
         $signup->signupUser();
 
         //Redirect
-        header("Location: login.php?error=none");
+        header("Location: ../login.php?error=none");
 
     }
 
