@@ -68,6 +68,7 @@
 
                 $_SESSION["session_id"] = $user[0]["user_id"];
                 $_SESSION["session_uid"] = $user[0]["user_uid"];
+                $_SESSION["session_code"] = $user[0]["user_numcode"];
 
                 $stmt = null;
 

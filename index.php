@@ -21,6 +21,9 @@
                 <h2>Welcome</h2>
             </div>
             <div class="contents">
+                
+            </div>
+            <div class="controls">
                 <div class="button">
                     <form action="login.php">
                         <input type="submit" class="loginbtn" value="Login">

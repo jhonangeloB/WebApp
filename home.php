@@ -29,11 +29,11 @@
                         </div>
                     <div class="user-info">
                         <div class="user">
-                            <h4>John Smith &nbsp;</h4> 
-                            <p>#3434</p>
+                            <h4><?php echo $_SESSION["session_uid"]; ?></h4> 
+                            <p>#<?php echo $_SESSION["session_code"]; ?></p>
                         </div>
                         <div class="status">
-                            <p><i class="fa fa-circle"></i>&nbsp; &nbsp;Active Now</p>
+                            <p><i class="fa fa-circle"></i> &nbsp;Online</p>
                         </div>
                     </div>
                     <div class="logout-btn">
@@ -50,69 +50,91 @@
                         </form>  
                     </div>
                     <div class="f-list">
-                        <div class="card">
-                            <div class="c-img">
-                                <img src="img/img.png" alt="">
+
+                        <a href="">
+                            <div class="card">
+                                <div class="c-content">
+                                    <div class="c-img">
+                                        <img src="img/img.png" alt="">
+                                    </div>
+                                    <div class="c-name">
+                                        <h4>John Smith</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>  
                             </div>
-                            <div class="c-name">
-                                <h4>John Smith</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+
+                        <a href="">
+                            <div class="card">
+                                <div class="c-content">
+                                    <div class="c-img">
+                                        <img src="img/img.png" alt="">
+                                    </div>
+                                    <div class="c-name">
+                                        <h4>John Smith</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>  
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="c-img">
-                                <img src="img/img.png" alt="">
+                        </a>
+
+                        <a href="">
+                            <div class="card">
+                                <div class="c-content">
+                                    <div class="c-img">
+                                        <img src="img/img.png" alt="">
+                                    </div>
+                                    <div class="c-name">
+                                        <h4>John Smith</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>  
                             </div>
-                            <div class="c-name">
-                                <h4>John Smith</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+
+                        <a href="">
+                            <div class="card">
+                                <div class="c-content">
+                                    <div class="c-img">
+                                        <img src="img/img.png" alt="">
+                                    </div>
+                                    <div class="c-name">
+                                        <h4>John Smith</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>  
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="c-img">
-                                <img src="img/img.png" alt="">
+                        </a>
+
+                        <a href="">
+                            <div class="card">
+                                <div class="c-content">
+                                    <div class="c-img">
+                                        <img src="img/img.png" alt="">
+                                    </div>
+                                    <div class="c-name">
+                                        <h4>John Smith</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>  
                             </div>
-                            <div class="c-name">
-                                <h4>John Smith</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </a>
+
+                        <a href="">
+                            <div class="card">
+                                <div class="c-content">
+                                    <div class="c-img">
+                                        <img src="img/img.png" alt="">
+                                    </div>
+                                    <div class="c-name">
+                                        <h4>John Smith</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>  
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="c-img">
-                                <img src="img/img.png" alt="">
-                            </div>
-                            <div class="c-name">
-                                <h4>John Smith</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="c-img">
-                                <img src="img/img.png" alt="">
-                            </div>
-                            <div class="c-name">
-                                <h4>John Smith</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="c-img">
-                                <img src="img/img.png" alt="">
-                            </div>
-                            <div class="c-name">
-                                <h4>John Smith</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="c-img">
-                                <img src="img/img.png" alt="">
-                            </div>
-                            <div class="c-name">
-                                <h4>John Smith</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
+                        </a>
+                      
                     </div>
                     <div class="add-user">
                         <label for="">Add user</label>
@@ -128,29 +150,91 @@
 
             <div class="r-wing">
                 <div class="r-header">
+                    <div class="c-img">
+                                <img src="img/img.png" alt="">
+                            </div>
                     <div class="user-info">
-                        <h4>John Doe</h4>
-                    </div>
-                    <div class="status">
+                        <div class="name">
+                            <h4>John Doe</h4>
+                        </div>
+                        <div class="status">
                             <p>Active Now</p>
-                    </div>
-                    
+                        </div>
+                    </div>  
                 </div>
                 <div class="r-content">
                     <div class="chat-area">
                         <div class="outgoing">
-                            <p>Hello</p>
+                            <div class="details">
+                                <p>Hello</p>
+                            </div>
+                        </div>
+                        <div class="outgoing">
+                            <div class="details">
+                                <p>ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss  </p>
+                            </div>
                         </div>
                         <div class="incoming">
-                            <p>Hello</p>
+                                <img src="img/img.png" alt="">
+                            
+                            <div class="details">
+                            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                            </div>
+                        </div>
+
+                        <div class="outgoing">
+                            <div class="details">
+                                <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </p>
+                            </div>
+                        </div>
+                        <div class="incoming">
+                                <img src="img/img.png" alt="">
+                            
+                            <div class="details">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+                            </div>
+                        </div>
+
+                        <div class="outgoing">
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+                            </div>
+                        </div>
+                        <div class="incoming">
+                                <img src="img/img.png" alt="">
+                            
+                            <div class="details">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+                            </div>
+                        </div>
+
+                        <div class="outgoing">
+                            <div class="details">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+                            </div>
+                        </div>
+                        <div class="incoming">
+                                <img src="img/img.png" alt="">
+                            
+                            <div class="details">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </p>
+                            </div>
+                        </div>
+
+                        <div class="incoming">
+                                <img src="img/img.png" alt="">
+                            
+                            <div class="details">
+                            <p>Lorem ipsum dolor  </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="control-area">
+
+                </div>
+                <div class="control-area">
                         <input type="text" placeholder="Type message here...">
                         <i class="fa fa-paper-plane" aria-hidden="true"></i>
-
                     </div>
-                </div>
             </div>
         </div>
     </div>

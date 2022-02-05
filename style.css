@@ -15,7 +15,6 @@ body {
     min-height: 100vh;
 }
 .wrapper {
-    margin: 20px;
     background-color: #fff;
     width: 450px;
     border-radius: 12px;
@@ -27,44 +26,44 @@ body {
 }
 
 /* Landing Page CSS */
-.form .contents form{
+.form .controls form{
     padding: 20px 0;
     display: flex;
     width: 100%;
 }
 
-.form .contents {
+.form .controls {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.form .contents .button{
+.form .controls .button{
     width: calc(100% / 2 - 10px);
 }
 
-.contents .button form input {
+.controls .button form input {
     padding: 10px 0;
     width: 100%;
     border-radius: 5px;
     border: solid 1px #303030;
 }
 
-.form .contents .loginbtn {
+.form .controls .loginbtn {
     background-color: #fff;
     color: #303030;
 }
-    .form .contents .loginbtn:hover {
+    .form .controls .loginbtn:hover {
         background-color: #303030;
         color: #fff;
         transition: .3s ease;
     }
 
-.form .contents .signupbtn {
+.form .controls .signupbtn {
     background-color: #303030;
     color: #fff;
 }
-    .form .contents .signupbtn:hover {
+    .form .controls .signupbtn:hover {
         background-color: #fff;
         color: #303030;
         transition: .3s ease;
@@ -181,24 +180,22 @@ body {
     height: 500px;
 }
 .container .l-wing{
-    padding: 20px 20px;
     background-color: #fff;
     width: calc(40% - 5px);
-    border-radius: 12px 0 0 12px;
+    border-radius: 12px 2px 2px 12px;
     box-shadow: 0px 10px 10px -10px;
 }
 
 .container .r-wing{
-    padding: 20px 20px;
     background-color: #fff;
     width: calc(60% - 5px);
-    border-radius:  0 12px 12px 0;
+    border-radius:  2px 12px 12px 2px;
     box-shadow: 0px 10px 10px -10px;
 }
 
 /* Left Wing */
 .panels .l-wing .l-header {
-    padding-bottom: 10px;
+    padding: 14px 10px;
     border-bottom: solid 1px #ccc;
     display: flex;
 }
@@ -226,7 +223,7 @@ body {
 }
 
 .panels .l-wing .l-header .user-info h4{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -234,7 +231,7 @@ body {
     font-style: italic;
     font-size: 12px;
     color: #606060;
-    line-height: 24px;
+    line-height: 20px;
 }
 
 .panels .l-wing .l-header .user-info .status p{
@@ -270,7 +267,11 @@ body {
 }
 
 .panels .l-wing .l-content {
-    margin: 10px 0;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.panels .l-wing .l-content .search {
+    padding: 0 10px;
 }
 
 .panels .l-wing .l-content .search form{
@@ -321,25 +322,43 @@ body {
   }
 
 .panels .l-wing .l-content .f-list .card {
-    max-height: 100px;
-    padding: 6px 0;
+    height: 60px;
+    padding: 10px 0;
     border-bottom: solid 1px #ccc;
+    
+}
+
+.panels .l-wing .l-content .f-list a {
+    text-decoration: none;
+    display: block;
+}
+
+.panels .l-wing .l-content .f-list a:hover,
+.panels .l-wing .l-content .f-list a:active {
+    background-color: #f7f7f7;
+}
+
+.panels .l-wing .l-content .f-list .card .c-content {
     display: flex;
 }
 
-.panels .l-wing .l-content .f-list .card .c-img img{
-    border: solid 2px #303030;
+.panels .l-wing .l-content .f-list .card .c-content .c-img {
+    margin-right: 5px;
+    transform: translateY(-5%);
+}
+
+.panels .l-wing .l-content .f-list .card .c-content img{
     width: 35px;
     height: 35px;
+    border: solid 2px #303030;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 5px;
     transform: translateY(10%);
 }
 
-.panels .l-wing .l-content .f-list .card .c-name {
-    display: block;
-    padding-left: 10px;
+.panels .l-wing .l-content .f-list .card .c-content .c-name {
+    margin: 0 5px;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -347,6 +366,7 @@ body {
 .panels .l-wing .l-content .f-list .card .c-name h4 {
     font-size: 12px;
     font-weight: 500;
+    color: #303030;
 }
 
 .panels .l-wing .l-content .f-list .card .c-name p {
@@ -357,7 +377,7 @@ body {
 }
 
 .panels .l-wing .l-content .add-user {
-    padding: 6px 0;
+    padding: 4px 0;
 }
 
 .panels .l-wing .l-content .add-user label {
@@ -409,11 +429,20 @@ body {
 
 /* Right Wing */
 .panels .r-wing .r-header {
-    padding: 8px 14px;
-}
-.panels .r-wing .r-header {
-    padding-bottom: 10px;
+    display: flex;
     border-bottom: solid 1px #ccc;
+    padding: 14px 10px;
+}
+
+.panels .r-wing .r-header .c-img img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.panels .r-wing .r-header .user-info {
+    padding: 0 10px;
 }
 
 .panels .r-wing .r-header .user-info h4 {
@@ -421,7 +450,7 @@ body {
     font-weight: 500;
 }
 
-.panels .r-wing .r-header .status p {
+.panels .r-wing .r-header .user-info p {
     font-size: 12px;
     font-weight: 400;
     color: green;
@@ -430,33 +459,101 @@ body {
 .panels .r-wing .r-content .chat-area {
     height: 360px;
     background-color: #f7f7f7;
+    padding: 0 20px 0 10px;
+    display: block;
+    flex-direction: column; 
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
 }
 
-.panels .r-wing .r-content .control-area {
+.chat-area .outgoing, .chat-area .incoming{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.chat-area .outgoing .details {
+    color: #fff;
+    margin-left: auto;
+    justify-content: flex-start;
+    max-width: calc(100% - 220px);
+}
+
+.chat-area .outgoing p {
+    padding: 6px 14px;
+    font-size: 12px;
+    background-color: #303030;
+    color: #fff;
+    border-radius: 12px 12px 0 12px;
+    word-wrap: break-word;
+}
+
+.chat-area .incoming img {
+    margin-right: 10px;
+}
+
+.chat-area .incoming .details {
+    color: #303030;
+    margin-right: auto;
+    justify-content: flex-end;
+    max-width: calc(100% - 220px);
+}
+
+.chat-area .incoming img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-area .incoming .details p{
+    padding: 6px 14px;
+    font-size: 12px;
+    background-color: #ccc;
+    color: #303030;
+    border-radius: 12px 12px 12px 0;
+    word-wrap: break-word;
+}
+
+.panels .r-wing .control-area {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 15px 20px;
     border-top: solid 1px #ccc;
 }
 
-.panels .r-wing .r-content .control-area input{
+.panels .r-wing .control-area input{
     border: solid 1px #ccc;
     outline: none;
-    border-radius: 4px 0 0 4px;
+    border-radius: 6px 0 0 6px;
     height: 35px;
-    width: calc(100% - 50px);
+    width: calc(100% - 42px);
     padding: 0px 14px;
-    font-size: 14px;
+    font-size: 12px;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
+    .panels .r-wing .control-area input:focus,
+    .panels .r-wing .control-area input:active {
+        border: solid 1px #303030;
+    }
 
-.panels .r-wing .r-content .control-area i{
+.panels .r-wing .control-area i{
     background-color: #303030;
     color: #fff;
     height: 35px;
-    width: 48px;
-    border-radius: 0 4px 4px 0;
+    width: 40px;
+    border-radius: 0 6px 6px 0;
     justify-content: center;
     line-height: 35px;
     text-align: center;
+    cursor: pointer;
 }
-
+    .panels .r-wing .control-area i:hover{
+        background: transparent;
+        border: none;
+        color: #303030;
+        font-size: 24px;
+        transition: .2s linear;
+    }
