@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -52,7 +53,8 @@
                     </div>
                     <div class="input-field">
                         <label>Password</label>
-                        <input type="password" name="pwd" placeholder="Enter Password" required>
+                        <input type="password" name="pwd" id="pwd" placeholder="Enter Password" required>
+                        <i class="fa fa-eye-slash" id="showPwd"></i>
                     </div>
                     <div class="input-field">
                         <input type="submit" name="login" class="submit" value="Continue">
@@ -64,5 +66,6 @@
             </div>
         </div>
     </div>
+    <script src="js/show-password.js"></script>
 </body>
 </html>

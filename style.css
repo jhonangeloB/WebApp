@@ -134,6 +134,13 @@ body {
     margin-top: 4px;
     padding: 0 16px;
 }
+#showPwd {
+    position: absolute;
+    cursor: pointer;
+    transform: translateY(90%);
+    margin-left: -30px;
+    color: #303030;
+}
 
 .content .input-field input:valid,
 .content .input-field input:focus {
@@ -470,7 +477,7 @@ body {
 .chat-area .outgoing, .chat-area .incoming{
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .chat-area .outgoing .details {
