@@ -26,7 +26,17 @@ body {
 }
 
 /* Landing Page CSS */
-.form .controls form{
+.index-header {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ccc;
+}
+
+.index-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form .controls form {
     padding: 20px 0;
     display: flex;
     width: 100%;
@@ -38,7 +48,7 @@ body {
     justify-content: space-between;
 }
 
-.form .controls .button{
+.form .controls .button {
     width: calc(100% / 2 - 10px);
 }
 
@@ -89,30 +99,36 @@ body {
     height: 35px;
     border-radius: 4px;
     text-align: center;
-    background: #ecffd6;
-    border: 1px solid #617c42;
+    background: #ccc;
 }
 
 .content .success-field span {
     line-height: 35px;
     font-size: 12px;
     font-weight: 400;
-    color: #2b7515;
+    color: #303030;
 }
 
 .content .error-field {
     height: 35px;
-    background: #ffe0e0;
     border-radius: 4px;
     text-align: center;
-    border: 1px solid #a33a3a;
+    background-color: #f3f3f3;
 }
 
 .content .error-field span {
     line-height: 35px;
     font-size: 12px;
     font-weight: 400;
-    color: #ba3939;
+    color: #303030;
+}
+
+.content .error-field i, .c-content .success-field i {
+    line-height: 35px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #303030;
 }
 
 .content form .input-field {
@@ -134,15 +150,27 @@ body {
     margin-top: 4px;
     padding: 0 16px;
 }
+
+.content .input-field #pwd {
+    padding: 0 40px 0 16px;
+}
+
 #showPwd {
     position: absolute;
     cursor: pointer;
-    transform: translateY(90%);
+    line-height: 45px;
     margin-left: -30px;
+    font-size: 14px;
     color: #303030;
 }
 
-.content .input-field input:valid,
+/* Disable reveal password on IE, Ms Edge */
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+
 .content .input-field input:focus {
     outline: solid 1px #303030;
     transition: 0.3s ease;
@@ -166,11 +194,11 @@ body {
     font-size: 12px;
 }
 
-.content .link a{
+.content .link a {
     text-decoration: none;
 }
 
-.content .link a:hover{
+.content .link a:hover {
     text-decoration: underline;
 }
 
@@ -186,14 +214,14 @@ body {
     justify-content: space-between;
     height: 500px;
 }
-.container .l-wing{
+.container .l-wing {
     background-color: #fff;
     width: calc(40% - 5px);
     border-radius: 12px 2px 2px 12px;
     box-shadow: 0px 10px 10px -10px;
 }
 
-.container .r-wing{
+.container .r-wing {
     background-color: #fff;
     width: calc(60% - 5px);
     border-radius:  2px 12px 12px 2px;
@@ -211,7 +239,7 @@ body {
     width: calc(20% - 5px);
 }
 
-.panels .l-wing .l-header .c-img img{
+.panels .l-wing .l-header .c-img img {
     height: 40px;
     width: 40px;
     object-fit: cover;
@@ -219,7 +247,7 @@ body {
     margin-right: 10px;
 }
 
-.panels .l-wing .l-header .user-info{
+.panels .l-wing .l-header .user-info {
     width: calc(60% - 5px);
     display: flex;
     flex-direction: column;
@@ -229,19 +257,19 @@ body {
     display: flex;
 }
 
-.panels .l-wing .l-header .user-info h4{
+.panels .l-wing .l-header .user-info h4 {
     font-size: 14px;
     font-weight: 600;
 }
 
-.panels .l-wing .l-header .user-info .user p{
+.panels .l-wing .l-header .user-info .user p {
     font-style: italic;
     font-size: 12px;
     color: #606060;
     line-height: 20px;
 }
 
-.panels .l-wing .l-header .user-info .status p{
+.panels .l-wing .l-header .user-info .status p {
     font-size: 12px;
     color: #303030;
     font-weight: 400;
@@ -253,67 +281,58 @@ body {
     font-size: 6px;
 }
 
-.panels .l-wing .l-header .logout-btn {
-    width: calc(20% - 5px);
+.panels .l-wing .l-header .logout form input {
+    border: none;
+    outline: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #303030;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
 }
-
-    .panels .l-wing .l-header .logout-btn:hover {
+    .panels .l-wing .l-header .logout form input:hover {
         opacity: .8;
         transition: .3s ease;
     }
-
-.panels .l-wing .l-header .logout-btn form input{
-    outline: none;
-    border: none;
-    padding: 6px 12px;
-    font-size: 12px;
-    background-color: #303030;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-}
 
 .panels .l-wing .l-content {
     margin-top: 10px;
     padding: 0 10px;
 }
-.panels .l-wing .l-content .search {
-    padding: 0 10px;
-}
 
-.panels .l-wing .l-content .search form{
+.panels .l-wing .l-content .pill-nav { 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.panels .l-wing .l-content .search input {
-    outline: none;
-    border: solid 1px #ccc;
-    height: 30px;
-    padding: 0 14px;
-    width: calc(100% - 40px);
-    border-radius: 4px 0 0 4px;
-}
-    .panels .l-wing .l-content .search input:focus {
-        border: solid 1px #303030;
-        transition: .3s ease;
-    }
-
-.panels .l-wing .l-content .search button {
-    border-style: none;
-    background-color: #303030;
-    color: #fff;
-    width: 38px;
-    font-size: 14px;
-    line-height: 30px;
+.panels .l-wing .l-content .pill-nav a {
+    display: inline-block;
+    padding: 6px 0;
+    text-decoration: none;
     text-align: center;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 600;
+    width: calc(100% / 2 - 5px);
+    border-radius: 4px;
+    color: #303030;
 }
-    .panels .l-wing .l-content .search button:hover {
-        opacity: .8;
-        transition: .3s ease;
-    }
+.panels .l-wing .l-content .pill-nav a:active,
+.panels .l-wing .l-content .pill-nav a:focus {
+    background-color: #ccc;
+}
+
+.panels .l-wing .l-content .pill-nav a:hover {
+    background-color: #f3f3f3;
+}
+
+.vl {
+    border-left: 1px solid #ccc;
+    height: 24px;
+    vertical-align: text-bottom;
+    transform: translateY(10%);
+}
 
 .panels .l-wing .l-content .f-list {
     margin-top: 10px;
@@ -349,12 +368,26 @@ body {
     display: flex;
 }
 
+.panels .l-wing .l-content .f-list .cards{
+    display: flex;
+    height: 300px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.panels .l-wing .l-content .f-list .cards .no-user h4 {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: .5;
+}
+
 .panels .l-wing .l-content .f-list .card .c-content .c-img {
     margin-right: 5px;
     transform: translateY(-5%);
 }
 
-.panels .l-wing .l-content .f-list .card .c-content img{
+.panels .l-wing .l-content .f-list .card .c-content img {
     width: 35px;
     height: 35px;
     border: solid 2px #303030;
@@ -384,7 +417,7 @@ body {
 }
 
 .panels .l-wing .l-content .add-user {
-    padding: 4px 0;
+    padding: 0 10px;
 }
 
 .panels .l-wing .l-content .add-user label {
@@ -396,8 +429,12 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.panels .l-wing .l-content .add-user p {
+    font-weight: 400;
+    color: #ccc;
+}
 
-.panels .l-wing .l-content .add-user form input{
+.panels .l-wing .l-content .add-user form input {
     padding: 0 14px;
     font-size: 12px;
     height: 25px;
@@ -441,7 +478,7 @@ body {
     padding: 14px 10px;
 }
 
-.panels .r-wing .r-header .c-img img{
+.panels .r-wing .r-header .c-img img {
     height: 35px;
     width: 35px;
     object-fit: cover;
@@ -474,7 +511,7 @@ body {
     scrollbar-width: none; 
 }
 
-.chat-area .outgoing, .chat-area .incoming{
+.chat-area .outgoing, .chat-area .incoming {
     display: flex;
     align-items: center;
     margin: 20px 0;
@@ -507,14 +544,14 @@ body {
     max-width: calc(100% - 220px);
 }
 
-.chat-area .incoming img{
+.chat-area .incoming img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.chat-area .incoming .details p{
+.chat-area .incoming .details p {
     padding: 6px 14px;
     font-size: 12px;
     background-color: #ccc;
@@ -530,7 +567,7 @@ body {
     border-top: solid 1px #ccc;
 }
 
-.panels .r-wing .control-area input{
+.panels .r-wing .control-area input {
     border: solid 1px #ccc;
     outline: none;
     border-radius: 6px 0 0 6px;
@@ -546,7 +583,7 @@ body {
         border: solid 1px #303030;
     }
 
-.panels .r-wing .control-area i{
+.panels .r-wing .control-area i {
     background-color: #303030;
     color: #fff;
     height: 35px;

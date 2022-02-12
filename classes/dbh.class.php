@@ -1,20 +1,17 @@
 <?php
-
     class Dbh {
 
-        protected function connect() {
+        private $host = "localhost";
+        private $username = "root";
+        private $password = "";
+        private $dbName = "WebApp";
 
-            try {
-                $username = "root";
-                $password = "";
-                $dbh = new PDO('mysql:host=localhost;dbname=WebApp', $username, $password);
-                return $dbh;
-            } 
+        protected function connect() {
             
-            catch (PDOException $e) {
-                print "Error!: ". $e->getMessage(). "<br/>";
-                die();
-            }
+            $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
+            $pdo = new PDO($dsn, $this->username, $this->password);
+            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            return $pdo;
         }
     }
 ?>

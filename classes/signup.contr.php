@@ -1,5 +1,4 @@
 <?php
-
     class SignupController extends Signup {
 
         private $uid;
@@ -46,7 +45,7 @@
             
             if($this->userTakenCheck() == false) {
                 header("Location: ../signup.php");
-                $_SESSION['error'] = "User already taken.";
+                $_SESSION['error'] = "Username or Email already taken.";
                 exit();
             }
 

@@ -11,7 +11,9 @@
             if(!$stmt->execute(array($uid, $email, $numcode, $hashed_password))) {
 
                 $stmt = null;
-                header("location: ../index.php?error=stmtfailed");
+                header("location: ../index.php?");
+                session_start();
+                $_SESSION["error"] = "Query failed";
                 exit();
             }
 
@@ -25,7 +27,9 @@
             if(!$stmt->execute(array($uid, $email))) {
                 
                 $stmt = null;
-                header("location: ../index.php?error=stmtfailed");
+                header("location: ../index.php?");
+                session_start();
+                $_SESSION["error"] = "Query failed";
                 exit();
             }
 

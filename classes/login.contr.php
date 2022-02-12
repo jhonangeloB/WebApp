@@ -14,7 +14,10 @@
         public function loginUser() {
 
             if($this->emptyInput() == false) {
-                header("Location: ../index.php?error=emptyinput");
+                header("Location: ../login.php?");
+
+                session_start();
+                $_SESSION["error"] = "Input field empty.";
                 exit();
             }
 

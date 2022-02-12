@@ -1,5 +1,4 @@
 <?php
-
     class Login extends Dbh {
         
         protected function getUser($uid, $pwd) {
@@ -9,7 +8,11 @@
             if(!$stmt->execute(array($uid, $uid))) {
 
                 $stmt = null;
-                header("location: ../login.php?error=stmtfailed");
+                header("Location: ../login.php?");
+
+                session_start();
+                $_SESSION["error"] = "Query failed.";
+
                 exit();
 
             }
@@ -17,7 +20,7 @@
             if($stmt->rowCount() == 0) {
 
                 $stmt = null;
-                header("Location: ../login.php?error=nouser");
+                header("Location: ../login.php?");
 
                 session_start();
                 $_SESSION["error"] = "There's no account with that username.";
@@ -32,7 +35,7 @@
             if ($checkPwd == false) {
 
                 $stmt = null;
-                header("Location: ../login.php");
+                header("Location: ../login.php?");
 
                 session_start();
                 $_SESSION["error"] = "Wrong password.";
@@ -46,7 +49,9 @@
                 if (!$stmt->execute(array($uid, $uid, $pwdHashed[0]['user_pwd']))){
 
                     $stmt = null;
-                    header("Location: ../login.php?error=stmtfailed");
+                    header("Location: ../login.php?");
+                    session_start();
+                    $_SESSION["error"] = "Query failed";
                     exit();
 
                 } 
@@ -54,7 +59,7 @@
                 if ($stmt->rowCount() == 0) {
 
                     $stmt = null;
-                    header("Location: ../login.php");
+                    header("Location: ../login.php?");
 
                     session_start();
                     $_SESSION['error'] = "User not found.";
